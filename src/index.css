@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --color-brand-50: #E6F7F5;
+  --color-brand-100: #B3E8E0;
+  --color-brand-200: #80D9CB;
+  --color-brand-300: #4DCAB6;
+  --color-brand-400: #26BBA1;
+  --color-brand-500: #1FA68D;
+  --color-brand-600: #198F79;
+  --color-brand-700: #137965;
+  --color-brand-800: #0D6251;
+  --color-brand-900: #074B3D;
+}
+
+* {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Select styling */
+select option {
+  background-color: #FFFFFF;
+  color: #111827;
+}
+
+body {
+  background: #F9FAFB;
+  overflow-x: hidden;
+  color: #111827;
+}
+
+/* Status left border cards */
+.lead-card-novo { border-left: 4px solid #94A3B8; background-color: #F9FAFB; }
+.lead-card-qualificado { border-left: 4px solid #3B82F6; background-color: #EFF6FF; }
+.lead-card-quente { border-left: 4px solid #EF4444; background-color: #FEF2F2; box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15); }
+.lead-card-morno { border-left: 4px solid #F59E0B; background-color: #FFFBEB; }
+.lead-card-frio { border-left: 4px solid #6B7280; background-color: #F9FAFB; }
+.lead-card-convertido { border-left: 4px solid #10B981; background-color: #F0FDF4; }
+.lead-card-perdido { border-left: 4px solid #6B7280; background-color: #F9FAFB; opacity: 0.75; }
+
+/* Pulse animation for live indicators */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Brand gradient */
+.brand-gradient {
+  background: linear-gradient(135deg, #26BBA1, #1FA68D);
+}
+
+.brand-gradient-subtle {
+  background: linear-gradient(135deg, rgba(38, 187, 161, 0.08), rgba(31, 166, 141, 0.04));
+}
